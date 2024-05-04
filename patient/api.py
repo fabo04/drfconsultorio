@@ -1,12 +1,13 @@
 from rest_framework import viewsets, permissions
-from .models import Usuario, Paciente, Profesional, Recepcionista, Informe, HistoriaClinica, Turno
-from .serializers import UsuarioSerializer, PacienteSerializer, ProfesionalSerializer, RecepcionistaSerializer, InformeSerializer, HistoriaClinicaSerializer, TurnoSerializer
+from .models import Paciente, Profesional, Recepcionista, Informe, HistoriaClinica, Turno
+from .serializers import PacienteSerializer, ProfesionalSerializer, RecepcionistaSerializer, InformeSerializer, HistoriaClinicaSerializer, TurnoSerializer
 
 # ViewSets para usuarios
-class UsuarioViewSet(viewsets.ModelViewSet):
+'''class UsuarioViewSet(viewsets.ModelViewSet):
     queryset = Usuario.objects.all()
     permission_classes = [permissions.AllowAny]
     serializer_class = UsuarioSerializer
+    '''
 
 # ViewSets para pacientes
 class PacienteViewSet(viewsets.ModelViewSet):

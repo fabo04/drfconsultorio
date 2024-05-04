@@ -1,30 +1,31 @@
 from rest_framework import serializers
-from .models import Paciente, Profesional, Recepcionista, Usuario, Informe, HistoriaClinica, Turno
+from .models import Paciente, Profesional, Recepcionista, Informe, HistoriaClinica, Turno
 
 from rest_framework import serializers
-from .models import Paciente, Profesional, Recepcionista, Usuario, Informe, HistoriaClinica, Turno
+from .models import Paciente, Profesional, Recepcionista, Informe, HistoriaClinica, Turno
 
-class UsuarioSerializer(serializers.ModelSerializer):
+'''class UsuarioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Usuario
         fields = '__all__'
+        '''
 
 class PacienteSerializer(serializers.ModelSerializer):
-    usuario = UsuarioSerializer(required=False)
+    #usuario = UsuarioSerializer(required=False)
 
     class Meta:
         model = Paciente
         fields = '__all__'
 
 class ProfesionalSerializer(serializers.ModelSerializer):
-    usuario = UsuarioSerializer(required=False)
+    #usuario = UsuarioSerializer(required=False)
 
     class Meta:
         model = Profesional
         fields = '__all__'
 
 class RecepcionistaSerializer(serializers.ModelSerializer):
-    usuario = UsuarioSerializer(required=False)
+    #usuario = UsuarioSerializer(required=False)
 
     class Meta:
         model = Recepcionista
