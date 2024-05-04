@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
 # Modelos de usuarios
-class Usuario(AbstractBaseUser, BaseUserManager):
+'''class Usuario(AbstractBaseUser, BaseUserManager):
     id_usuario = models.AutoField(primary_key=True)
     nombre_usuario = models.CharField(max_length=255, unique=True)
     contrasena = models.CharField(max_length=255)
@@ -31,6 +31,7 @@ class Usuario(AbstractBaseUser, BaseUserManager):
     def __str__(self):
         return self.nombre_usuario
 
+        '''
 # Modelos de pacientes
 class Paciente(models.Model):
     nombre = models.CharField(max_length=255)
@@ -45,7 +46,7 @@ class Paciente(models.Model):
     alergias = models.TextField(blank=True)
     enfermedades_cronicas = models.TextField(blank=True)
     medicamentos_que_toma = models.TextField(blank=True)
-    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    #usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
 
 # Modelos de profesionales
 class Profesional(models.Model):
@@ -56,7 +57,7 @@ class Profesional(models.Model):
     especialidad = models.CharField(max_length=255)
     telefono = models.CharField(max_length=20)
     email = models.EmailField(unique=True)
-    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    #usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
 
 # Modelos de recepcionistas
 class Recepcionista(models.Model):
@@ -65,7 +66,7 @@ class Recepcionista(models.Model):
     dni = models.CharField(max_length=20, unique=True)
     telefono = models.CharField(max_length=20)
     email = models.EmailField(unique=True)
-    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    #usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
 
 # Modelos de informes
 class Informe(models.Model):
